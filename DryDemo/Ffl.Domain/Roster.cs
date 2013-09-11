@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace Ffl.Domain
+﻿namespace Ffl.Domain
 {
     public class Roster
     {
         public Quarterbacks Quarterbacks { get; private set; }
         public OffensiveLinemen OffensiveLinemen { get; private set; }
+        public DefensiveBacks DefensiveBacks { get; private set; }
         public SpecialTeamsPlayers SpecialTeamsPlayers { get; private set; } 
 
         public void ChangeQuarterbacks(Quarterbacks quarterbacks)
@@ -21,6 +20,11 @@ namespace Ffl.Domain
         public void ChangeSpecialTeams(SpecialTeamsPlayers specialTeamsPlayers)
         {
             SpecialTeamsPlayers = specialTeamsPlayers;
+        }
+
+        public void ChangeDefensiveBacks(DefensiveBacks defensiveBacks)
+        {
+            DefensiveBacks = defensiveBacks;
         }
     }
 }

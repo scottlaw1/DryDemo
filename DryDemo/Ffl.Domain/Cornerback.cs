@@ -1,10 +1,10 @@
 ﻿namespace Ffl.Domain
 {
-    public class DefensiveBack : Player
+    public class Cornerback : DefensiveBack
     {
         public override Position Position
         {
-            get { return Position.DB; }
+            get { return Position.CB; }
         }
     }
 }

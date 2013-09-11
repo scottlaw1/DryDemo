@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cornerback.cs" />
     <Compile Include="DefensiveBack.cs" />
+    <Compile Include="DefensiveBacks.cs" />
+    <Compile Include="FreeSafety.cs" />
     <Compile Include="IRosterGroup.cs" />
     <Compile Include="IValueObject.cs" />
     <Compile Include="Kicker.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="SkillPlayers.cs" />
     <Compile Include="SpecialTeamsPlayer.cs" />
     <Compile Include="SpecialTeamsPlayers.cs" />
+    <Compile Include="StrongSafety.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

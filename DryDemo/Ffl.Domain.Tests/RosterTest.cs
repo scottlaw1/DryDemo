@@ -27,6 +27,24 @@ namespace Ffl.Domain.Tests
         }
 
         [Test]
+        public void CanAddDefensiveBacks()
+        {
+            var roster = new Roster();
+
+            var dbs = new DefensiveBacks(new[]
+            {
+                new Cornerback{FirstName = "DeAngelo", LastName = "Hall", TeamName = "Washington Redskins"}, 
+                new Cornerback{FirstName = "David", LastName = "Amerson", TeamName = "Washington Redskins"}, 
+                new StrongSafety{FirstName = "Baccari", LastName = "Rambo", TeamName = "Washington Redskins"},
+                new DefensiveBack{FirstName = "E", LastName = "Biggers", TeamName = "Washington Redskins"}, 
+            });
+
+            roster.ChangeDefensiveBacks(dbs);
+
+            Assert.AreEqual(dbs, roster.DefensiveBacks);
+        }
+
+        [Test]
         public void CanAddSpecialTeams()
         {
             var roster = new Roster();
