@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Ffl.Domain
 {
-    public abstract class PositionGroup<TPlayer> : IPositionGroup<TPlayer>, IEquatable<PositionGroup<TPlayer>>
+    public abstract class RosterGroup<TPlayer> : IRosterGroup<TPlayer>, IEquatable<RosterGroup<TPlayer>>
     {
-        public bool Equals(PositionGroup<TPlayer> other)
+        public bool Equals(RosterGroup<TPlayer> other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -18,7 +18,7 @@ namespace Ffl.Domain
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
-            return Equals((PositionGroup<TPlayer>) obj);
+            return Equals((RosterGroup<TPlayer>) obj);
         }
 
         public override int GetHashCode()
@@ -34,7 +34,7 @@ namespace Ffl.Domain
             private set { players = value.ToList(); }
         }
 
-        protected PositionGroup(IEnumerable<TPlayer> players)
+        protected RosterGroup(IEnumerable<TPlayer> players)
         {
             if (players != null) this.players.AddRange(players);
         } 

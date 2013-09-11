@@ -1,10 +1,10 @@
 ﻿namespace Ffl.Domain
 {
-    public abstract class Player : IPosition
+    public abstract class Player
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Team { get; set; }
+        public string TeamName { get; set; }
         public abstract Position Position { get; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Ffl.Domain
 {
-    public class OffensiveLinemen : PositionGroup<OffensiveLineman>
+    public class OffensiveLinemen : RosterGroup<OffensiveLineman>
     {
         public OffensiveLinemen(IEnumerable<OffensiveLineman> players)
             : base(players)

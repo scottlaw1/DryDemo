@@ -2,7 +2,7 @@
 
 namespace Ffl.Domain
 {
-    public interface IPositionGroup<out TPlayer> : IValueObject
+    public interface IRosterGroup<out TPlayer> : IValueObject
     {
         IEnumerable<TPlayer> Players { get; }
     }

@@ -13,9 +13,10 @@ namespace Ffl.Domain.Tests
 
             var qbsToAdd = new List<Quarterback>
             {
-                new Quarterback {FirstName = "Robert", LastName = "Griffin", Team = "Washington Redskins"},
-                new Quarterback {FirstName = "Kirk", LastName = "Cousins", Team = "Washington Redskins"},
-                new Quarterback {FirstName = "Rex", LastName = "Grossman", Team = "Washington Redskins"}
+                new Quarterback {FirstName = "Robert", LastName = "Griffin", TeamName = "Washington Redskins"},
+                new Quarterback {FirstName = "Kirk", LastName = "Cousins", TeamName = "Washington Redskins"},
+                new Quarterback {FirstName = "Rex", LastName = "Grossman", TeamName = "Washington Redskins"},
+                new Quarterback {FirstName = "Pat", LastName = "White", TeamName = "Washington Redskins"}
             };
 
             var quarterbacks = new Quarterbacks(qbsToAdd);
@@ -23,6 +24,20 @@ namespace Ffl.Domain.Tests
             roster.ChangeQuarterbacks(quarterbacks);
 
             Assert.AreEqual(quarterbacks, roster.Quarterbacks);
+        }
+
+        [Test]
+        public void CanAddSpecialTeams()
+        {
+            var roster = new Roster();
+
+            var specialsToAdd = new List<SpecialTeamsPlayer>
+            {
+                new Kicker {FirstName = "Kai", LastName = "Forbath", TeamName = "Washington Redskins"},
+                new Punter {FirstName = "Sav", LastName = "Rocca", TeamName = "Washington Redskins"}
+            };
+
+            roster.ChangeSpecialTeams(new SpecialTeamsPlayers(specialsToAdd));
         }
     }
 }
